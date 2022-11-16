@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf721def-8dd5-48e1-aa8c-00fbfee90a80" name="Default Changelist" comment="" />
+    <list default="true" id="cf721def-8dd5-48e1-aa8c-00fbfee90a80" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/board.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenshot.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2HbHCljlEVu8rfgUHjfajD8pPBr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,7 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chess_turing_test/src/piece_recognition/get_coords.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
