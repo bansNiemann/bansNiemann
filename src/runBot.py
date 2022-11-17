@@ -119,7 +119,7 @@ def formatFen(predictedFen,sideToStart,whiteAlwaysBottom = True):
     fen = board.fen()
     return fen
 
-def initializeMouseFrameOfReference(left, top, right, bot, sideToStart, offset = [-68,88], whiteAlwaysBottom = True):
+def initializeMouseFrameOfReference(left, top, right, bot, sideToStart, whiteAlwaysBottom = True, offset = [-68,88]):
     # square to coords
     square_to_coords = []
 
