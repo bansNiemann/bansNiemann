@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf721def-8dd5-48e1-aa8c-00fbfee90a80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/board.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/board.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runBot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenshot.png" afterDir="false" />

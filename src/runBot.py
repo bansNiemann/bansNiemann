@@ -62,7 +62,7 @@ def getCroppedBoard(left, top, right, bot):
 
 
 # search position for a best move
-def search(fen,depth = 15):
+def search(fen,depth = 7):
     # create chess board instance and set position from FEN string
     print('Searching best move for this position:')
     print(fen)
@@ -107,10 +107,10 @@ def flipFen(fen):
     flippedFen = '/'.join(flippedFen)
     return flippedFen
 
-def formatFen(predictedFen,sideToStart,):
+def formatFen(predictedFen,sideToStart,whiteAlwaysBottom = True):
     fen = predictedFen.replace('-', '/')
 
-    if sideToStart:
+    if sideToStart and not whiteAlwaysBottom:
         fen = flipFen(fen)
 
     # add side to move to fen
@@ -119,11 +119,11 @@ def formatFen(predictedFen,sideToStart,):
     fen = board.fen()
     return fen
 
-def initializeMouseFrameOfReference(left, top, right, bot, sideToStart, offset = [-68,88]):
+def initializeMouseFrameOfReference(left, top, right, bot, sideToStart, offset = [-68,88], whiteAlwaysBottom = True):
     # square to coords
     square_to_coords = []
 
-    if sideToStart:
+    if sideToStart and not whiteAlwaysBottom:
         # array to convert board square indices to coordinates (black)
         get_square = [
             'h1', 'g1', 'f1', 'e1', 'd1', 'c1', 'b1', 'a1',
@@ -178,6 +178,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--sideToStart', type=str, required=True)
     parser.add_argument('--manualTimings', default=False, action='store_true')
+    parser.add_argument('--whiteAlwaysBottom', default=True, action='store_false')
 
     args = parser.parse_args()
     sideToStart = args.sideToStart.lower()
@@ -192,7 +193,12 @@ if __name__ == "__main__":
     left, top, right, bot = initialScreenshot()
     boardSize, cellSize = calcBoardSettings(left,top,right,bot)
 
-    square_to_coords, get_square = initializeMouseFrameOfReference(left, top, right, bot, sideToStart)
+    square_to_coords, get_square = initializeMouseFrameOfReference(left,
+                                                                   top,
+                                                                   right,
+                                                                   bot,
+                                                                   sideToStart,
+                                                                   args.whiteAlwaysBottom)
 
     ################################
     #
@@ -209,7 +215,7 @@ if __name__ == "__main__":
 
             # convert piece image coordinates to FEN string
             predictedFen = getFenPrediciton()
-            fen = formatFen(predictedFen,sideToStart)
+            fen = formatFen(predictedFen,sideToStart,args.whiteAlwaysBottom)
 
             best_move = search(fen)
             print('Best move:', best_move)
